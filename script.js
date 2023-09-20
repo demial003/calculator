@@ -6,13 +6,6 @@ const multiply = (x, y) => x * y;
 
 const divide = (x, y) => x / y;
 
-const operate = (x, y, opr) => {
-  if (opr === "+") return add(x, y);
-  if (opr === "-") return subtract(x, y);
-  if (opr === "*") return multiply(x, y);
-  if (opr === "/") return divide(x, y);
-};
-
 const numbers = document.querySelectorAll(".number");
 const display = document.querySelector(".display");
 let displayed = false;
@@ -61,6 +54,11 @@ const getOperator = () => {
       }
       if (e.target.textContent === "+/-") {
         operation = "invert";
+        num1 = Number(display.textContent);
+        equals();
+      }
+      if (e.target.textContent === "%") {
+        operation = "percent";
         num1 = Number(display.textContent);
         equals();
       }
@@ -116,7 +114,9 @@ const equals = () => {
   }
   if (operation === "invert") {
     display.textContent = multiply(num1, -1);
-    console.log(num1);
+  }
+  if (operation === "percent") {
+    display.textContent = divide(num1, 100);
   }
 };
 
