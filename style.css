@@ -81,3 +81,16 @@ button{
 }
 
 
+.function:hover, 
+.invert:hover{
+    background-color: rgba(211, 211, 211, 0.3);
+}
+
+.number:hover,
+.decimal:hover{
+    background-color: rgba(32, 30, 30, 0.3);
+}
+
+.operator:hover{
+    background-color: rgba(255, 179, 36, 0.3);
+}
