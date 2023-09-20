@@ -75,14 +75,16 @@ button{
 }
 
 .function, 
-.invert{
+.invert,
+.percent{
     background-color: darkgray;
     color: black;
 }
 
 
 .function:hover, 
-.invert:hover{
+.invert:hover,
+.percent:hover{
     background-color: rgba(211, 211, 211, 0.3);
 }
 
@@ -94,3 +96,4 @@ button{
 .operator:hover{
     background-color: rgba(255, 179, 36, 0.3);
 }
+
